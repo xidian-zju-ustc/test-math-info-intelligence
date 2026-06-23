@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>联合学术报告 | 数交叉·智融合</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand-lockup" href="index.html" aria-label="数交叉·智融合首页">
+      <img src="assets/brand-logo.png" alt="数交叉·智融合品牌标识">
+      <span>
+        <strong>数交叉·智融合</strong>
+        <small>Mathematics × Information Intelligence</small>
+      </span>
+    </a>
+    <nav class="top-nav" aria-label="主导航">
+      <a href="index.html#about">平台简介</a>
+      <a href="index.html#latest">最新活动</a>
+      <a class="current" href="joint-reports.html">联合学术报告</a>
+      <!--
+      <a href="summer-school.html">暑期学校</a>
+      <a href="conferences.html">国际会议</a>
+      -->
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-title report-title">
+      <p class="eyebrow">Joint Academic Talk Series</p>
+      <h1>联合学术报告</h1>
+      <p>
+        将持续发布报告嘉宾、报告题目、时间地点、摘要简介及海报资料，欢迎广大师生和相关领域学者关注并参与交流。
+      </p>
+    </section>
+
+    <section class="section report-section">
+      <div class="section-heading compact-heading">
+        <p class="eyebrow">Speakers</p>
+        <h2>报告嘉宾</h2>
+        <p>可通过关键词、年份筛选和分页浏览。</p>
+      </div>
+      <div class="list-controls" aria-label="报告名单筛选">
+        <label class="search-box">
+          <span>Search</span>
+          <input id="speakerSearch" type="search" placeholder="Search name, affiliation, topic">
+        </label>
+        <label class="select-box">
+          <span>Year</span>
+          <select id="yearFilter">
+            <option value="all">All years</option>
+            <option value="2026">2026</option>
+          </select>
+        </label>
+      </div>
+      <div class="table-wrap" aria-label="联合学术报告参会学者名单">
+        <table class="speaker-table">
+          <thead>
+            <tr>
+              <th>时间/Time</th>
+              <th>学者姓名/Speaker</th>
+              <th>单位/Affiliation</th>
+              <th>报告题目/Title</th>
+              <th>状态/Status</th>
+            </tr>
+          </thead>
+          <tbody>
+             <tr data-report-id="upcoming-report-1" data-year="2026" data-date="2026-06-25" data-status="upcoming" data-name="邢朝平" data-affiliation="上海交通大学" data-topic="Fast Fourier transform via automorphism groups of rational function fields">
+              <td>2026-06-25</td>
+              <td>
+              <div class="zh">邢朝平教授</div>
+              <div class="en">Prof. Chaoping Xing</div>
+              </td>
+              <td>
+              <div class="zh">上海交通大学</div>
+              <div class="en">Shanghai Jiao Tong Univeristy</div>
+              </td>
+              <td>
+              <div class="en">Fast Fourier transform via automorphism groups of rational function fields</div>
+              </td>
+              <td><span class="table-status">Upcoming</span></td>
+            </tr>
+
+            <tr data-report-id="upcoming-report-2" data-year="2026" data-date="2026-07-01" data-status="upcoming" data-name="李才恒" data-affiliation="南方科技大学" data-topic="报告题目待更新">
+              <td>2026-07-01</td>
+              <td>
+              <div class="zh">李才恒教授</div>
+              <div class="en">Prof. Caiheng Li</div>
+              </td>
+              <td>
+              <div class="zh">南方科技大学</div>
+              <div class="en">Southern University of Science and Technology</div>
+              </td>
+              <td>
+              <div class="en">TBA</div>
+              </td>
+              <td><span class="table-status">Upcoming</span></td>
+            </tr>
+            
+            <tr data-report-id="upcoming-report-3" data-year="2026" data-date="2026-09-02" data-status="upcoming" data-name="宗传明" data-affiliation="天津大学" data-topic="报告题目待更新">
+              <td>2026-09-02</td>
+              <td>
+              <div class="zh">宗传明教授</div>
+              <div class="en">Prof. Chuanming Zong</div>
+              </td>
+              <td>
+              <div class="zh">天津大学</div>
+              <div class="en">Tianjin University</div>
+              </td>
+              <td>
+              <div class="en">TBA</div>
+              </td>
+              <td><span class="table-status">Upcoming</span></td>
+            </tr>
+
+            <!--
+            <tr data-report-id="report-3" data-year="2026" data-date="" data-status="planned" data-name="Speaker Name" data-affiliation="University / Research Institute" data-topic="Mathematics and Information Intelligence">
+              <td>2026-XX-XX</td>
+              <td>Prof. / Dr. Speaker Name</td>
+              <td>University / Research Institute</td>
+              <td>Mathematics and Information Intelligence</td>
+              <td><span class="table-status muted">Planned</span></td>
+            </tr>
+            -->
+          </tbody>
+        </table>
+      </div>
+      <div class="pagination" aria-label="往期报告分页">
+        <button type="button" id="prevPage">上一页</button>
+        <span id="pageInfo">Previous Talks Page 1 / 1</span>
+        <button type="button" id="nextPage">下一页</button>
+      </div>
+
+      <div class="section-heading compact-heading report-detail-heading">
+        <p class="eyebrow">Talks</p>
+        <h2>报告详情</h2>
+      </div>
+
+      <div class="speaker-list report-list" id="speakerList">
+
+         <article class="speaker-card report-card" data-report-id="upcoming-report-1" data-year="2026" data-date="2026-06-25" data-status="upcoming" data-name="邢朝平" data-affiliation="上海交通大学" data-topic="Fast Fourier transform via automorphism groups of rational function fields">
+          <a class="poster-frame" href="assets/poster-chaoping-xing.png" aria-label="查看海报">
+            <img src="assets/poster-chaoping-xing.png" alt="联合报告海报模板">
+          </a>
+          <div class="report-content">
+            <div class="speaker-meta">
+              <span class="date">2026-06-25</span>
+              <span class="status">Upcoming</span>
+            </div>
+            <h2>邢朝平教授 / Prof. Chaoping Xing</h2>
+            <p class="affiliation">上海交通大学 / Shanghai Jiao Tong University</p>
+            <h3>Title: Fast Fourier transform via automorphism groups of rational function fields</h3>
+            <dl class="report-details">
+              <div>
+                <dt>Time</dt>
+                <dd>2026-06-25, 15:00-16:00</dd>
+              </div>
+              <div>
+                <dt>Venue</dt>
+                <dd>
+                 Tencent Meeting ID: 868-370-2616, Passcode: 112233
+              </div>
+            </dl>
+            <p class="summary">
+             The Fast Fourier Transform (FFT) over a finite field F_q computes evaluations of a given polynomial of degree less than n at a specifically chosen set of n distinct evaluation points in F_q. If q or q − 1 is a smooth number,
+              then the divide-and-conquer approach leads to the fastest known FFT algorithms. Depending on the type of group that the set of evaluation points forms, these algorithms are classified as multiplicative (Math of Comp. 1965) 
+              and additive (FOCS 2014) FFT algorithms. In this work, we provide a unified framework for FFT algorithms that include both multiplicative and additive FFT algorithms as special cases, and beyond: our framework also works
+              when q + 1 is smooth, while all known results require q or q − 1 to be smooth. For the new case where q + 1 is smooth(this new case was not considered before in literature as far as we know), we show that 
+              if n is a divisor of q + 1 that is B-smooth for a real B > 0, then our FFT needs O(Bn log n) arithmetic operations in F_q.
+            </p>
+            <div class="card-actions">
+              <a href="assets/poster-chaoping-xing.png" aria-label="查看海报">Details</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="speaker-card report-card" data-report-id="upcoming-report-2" data-year="2026" data-date="2026-07-01" data-status="upcoming" data-name="李才恒" data-affiliation="南方科技大学" data-topic="报告题目待更新">
+          <a class="poster-frame" href="assets/poster-blank.png" aria-label="查看海报">
+            <img src="assets/poster-blank.png" alt="联合报告海报模板">
+          </a>
+          <div class="report-content">
+            <div class="speaker-meta">
+              <span class="date">2026-07-01</span>
+              <span class="status">Upcoming</span>
+            </div>
+            <h2>李才恒教授 / Prof. Caiheng Li</h2>
+            <p class="affiliation">南方科技大学 / Southern University of Science and Technology</p>
+            <h3>报告题目待更新 / TBA</h3>
+            <dl class="report-details">
+              <div>
+                <dt>Time</dt>
+                <dd>2026-07-01, 15:00-16:00</dd>
+              </div>
+              <div>
+                <dt>Venue</dt>
+                <dd>线上/线下</dd>
+              </div>
+            </dl>
+            <p class="summary">
+              待更新 / TBA。
+            </p>
+            <div class="card-actions">
+              <a href="assets/poster-blank.png" aria-label="查看海报">Details</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="speaker-card report-card" data-report-id="upcoming-report-3" data-year="2026" data-date="2026-09-02" data-status="upcoming" data-name="宗传明" data-affiliation="天津大学" data-topic="报告题目待更新">
+          <a class="poster-frame empty-poster" href="#" aria-label="海报待上传">
+            <span>Poster<br>Coming Soon</span>
+          </a>
+          <div class="report-content">
+            <div class="speaker-meta">
+              <span class="date">2026-09-02</span>
+              <span class="status">Upcoming</span>
+            </div>
+            <h2>宗传明教授 / Prof. Chuanming Zong</h2>
+            <p class="affiliation">天津大学 / Tianjin University</p>
+            <h3>报告题目待更新 / TBA</h3>
+            <dl class="report-details">
+              <div>
+                <dt>Time</dt>
+                <dd>2026-09-02</dd>
+              </div>
+              <div>
+                <dt>Venue</dt>
+                <dd>线上/线下</dd>
+              </div>
+            </dl>
+            <p class="summary">
+              待更新 / TBA
+            </p>
+            <div class="card-actions">
+              <a href="#" aria-label="海报待上传">Details</a>
+            </div>
+          </div>
+        </article>
+        <!--
+        <article class="speaker-card report-card" data-report-id="report-3" data-year="2026" data-date=2026-06-24"" data-status="planned" data-name="Firstname Lastname" data-affiliation="Department / Institute, University" data-topic="Talk Title">
+          <a class="poster-frame" href="assets/poster-template.png" aria-label="查看报告海报">
+            <img src="assets/poster-template.png" alt="联合报告海报模板">
+          </a>
+          <div class="report-content">
+            <div class="speaker-meta">
+              <span class="date">2026-XX-XX</span>
+              <span class="status">Planned</span>
+            </div>
+            <h2>Prof. / Dr. Firstname Lastname</h2>
+            <p class="affiliation">Department / Institute, University</p>
+            <h3>Talk Title</h3>
+            <dl class="report-details">
+              <div>
+                <dt>Time</dt>
+                <dd>XX:XX-XX:XX (UTC+8)</dd>
+              </div>
+              <div>
+                <dt>Venue</dt>
+                <dd>Room XXX / Online</dd>
+              </div>
+            </dl>
+            <p class="summary">
+              Add a short abstract or keyword summary here. This area can record the speaker's research direction,
+              interdisciplinary background, and the main theme of the report.
+            </p>
+            <div class="card-actions">
+              <a href="assets/poster-template.png" aria-label="查看海报">Details</a>
+            </div>
+          </div>
+        </article>
+        -->     
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>数交叉·智融合</span>
+    <span><a href="index.html">Back to Home</a></span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
