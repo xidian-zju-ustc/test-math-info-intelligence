@@ -399,6 +399,31 @@ p {
   color: #123b75;
 }
 
+.organizer-list .person-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 6px;
+  border-radius: 5px;
+  color: var(--blue);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  background: rgba(40, 116, 200, 0.1);
+}
+
+.organizer-list .person-link::after {
+  content: "↗";
+  font-size: 12px;
+  line-height: 1;
+}
+
+.organizer-list .person-link:hover,
+.organizer-list .person-link:focus-visible {
+  color: #fff;
+  background: var(--blue);
+  outline: none;
+}
+
 .organizer-list a {
   color: var(--blue);
   font-weight: 800;
