@@ -32,14 +32,16 @@ function todayStart() {
 }
 
 function reportGroup(entry) {
+  const status = (entry.dataset.status || "").toLowerCase();
+  if (["recent", "completed", "previous", "past"].includes(status)) return 1;
+  if (["unscheduled", "draft"].includes(status)) return 2;
+
   const stamp = dateRank(entry.dataset.date);
   if (stamp !== Number.NEGATIVE_INFINITY) {
     return stamp >= todayStart() ? 0 : 1;
   }
 
-  const status = (entry.dataset.status || "").toLowerCase();
   if (["upcoming", "ongoing", "planned"].includes(status)) return 0;
-  if (["recent", "completed", "previous", "past"].includes(status)) return 1;
 
   return 2;
 }
