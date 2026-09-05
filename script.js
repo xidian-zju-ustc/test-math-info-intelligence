@@ -4,6 +4,7 @@ const yearFilter = document.querySelector("#yearFilter");
 const prevPageButtons = document.querySelectorAll(".prev-page");
 const nextPageButtons = document.querySelectorAll(".next-page");
 const pageInfoElements = document.querySelectorAll(".page-info");
+const reportHeading = document.querySelector(".report-section > .section-heading");
 const tableRows = [...document.querySelectorAll(".speaker-table tbody tr[data-report-id]")];
 let currentPage = 1;
 const previousPageSize = 10;
@@ -206,10 +207,25 @@ if (searchInput) {
       updateResults();
     });
   });
-  nextPageButtons.forEach((button) => {
+  nextPageButtons.forEach((button, index) => {
     button.addEventListener("click", () => {
       currentPage += 1;
       updateResults();
+      if (index === 0 && reportHeading) {
+        const siteHeader = document.querySelector(".site-header");
+        const headerHeight = siteHeader ? siteHeader.offsetHeight : 0;
+        const targetTop = reportHeading.getBoundingClientRect().top + window.scrollY - headerHeight - 16;
+        window.scrollTo({ top: Math.max(0, targetTop), behavior: "smooth" });
+      }
+      if (index === 1) {
+        const previousTalksHeading = speakerList.querySelector('.report-group-heading[data-report-group="1"]');
+        if (previousTalksHeading) {
+          const siteHeader = document.querySelector(".site-header");
+          const headerHeight = siteHeader ? siteHeader.offsetHeight : 0;
+          const targetTop = previousTalksHeading.getBoundingClientRect().top + window.scrollY - headerHeight - 16;
+          window.scrollTo({ top: Math.max(0, targetTop), behavior: "smooth" });
+        }
+      }
     });
   });
   updateResults();
